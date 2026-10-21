@@ -22,6 +22,15 @@ const onScroll = () => header.classList.toggle("scrolled", window.scrollY > 8);
 window.addEventListener("scroll", onScroll, { passive: true });
 onScroll();
 
+// Anchor jumps clear the sticky header, whose height changes with the screen (two rows on phones).
+new ResizeObserver(() => root.style.setProperty("--header-h", `${header.offsetHeight}px`)).observe(header);
+
+// Paper titles and authors: always shown on wide screens, folded behind one tap on phones.
+const wide = window.matchMedia("(min-width: 761px)");
+const setCites = () => document.querySelectorAll(".cite").forEach((d) => { d.open = wide.matches; });
+wide.addEventListener("change", setCites);
+setCites();
+
 // Explainer videos: every paper figure and project poster opens one shared player.
 const player = document.getElementById("player");
 if (player) {

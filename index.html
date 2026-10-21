@@ -66,7 +66,7 @@
     <div class="wrap top-inner">
       <a class="brand" href="#">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="2.2" fill="currentColor"/><path d="M12 3.5a8.5 8.5 0 0 1 8.5 8.5M12 7a5 5 0 0 1 5 5M3.5 12A8.5 8.5 0 0 0 12 20.5" opacity=".75"/></svg>
-        Badrikanath Praharaj
+        <span>Badrikanath Praharaj</span>
       </a>
       <nav aria-label="Sections">
         <a href="#research">Research</a>
@@ -103,7 +103,7 @@
             <li><a href="https://scholar.google.com/citations?user=C7Sa9OwAAAAJ" target="_blank" rel="noopener">Google Scholar</a></li>
             <li><a href="https://github.com/Badri1401" target="_blank" rel="noopener">GitHub</a></li>
             <li><a href="https://www.linkedin.com/in/badrikanath-praharaj-903822294/" target="_blank" rel="noopener">LinkedIn</a></li>
-            <li><a href="assets/pdf/Badrikanath_Praharaj_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
+            <li class="dup"><a href="assets/pdf/Badrikanath_Praharaj_CV.pdf" target="_blank" rel="noopener">CV (PDF)</a></li>
           </ul>
         </div>
         <figure class="portrait">
@@ -153,15 +153,17 @@
     <section class="block" id="research">
       <div class="wrap">
         <div class="head"><span class="idx">01</span><h2>Research</h2></div>
-        <p class="intro">Robots are trained in made-up worlds and then fail in real ones. I build digital twins from real scans, and test robots on real hardware, so the gap shows up before deployment. Every paper has a short explainer video: press play on its figure.</p>
+        <p class="intro">Robots are trained in made-up worlds and then fail in real ones. I build digital twins from real scans, and test robots on real hardware, so the gap shows up before deployment. <span class="extra">Every paper has a short explainer video: press play on its figure.</span></p>
         <p class="next-step"><b>Next: full papers.</b> These are workshop papers. Over the coming year I am extending each one into a full paper for a main venue: <span class="venues">ICRA, RSS, IEEE RA-L and T-RO</span>.</p>
 
         <ol class="papers" reversed>
           <li class="paper">
             <div>
               <p class="catch">A real copper mine, rebuilt for robots to learn in.</p>
-              <h3>MineXplore: An Open-Source Reinforcement Learning Exploration Benchmark for GNSS-Denied Underground Environment</h3>
-              <p class="authors">Abhishek S*, <b>Badrikanath Praharaj*</b>, Sreeram M.V.* <span>* equal contribution</span></p>
+              <details class="cite"><summary>Full title and authors</summary>
+                <h3>MineXplore: An Open-Source Reinforcement Learning Exploration Benchmark for GNSS-Denied Underground Environment</h3>
+                <p class="authors">Abhishek S*, <b>Badrikanath Praharaj*</b>, Sreeram M.V.* <span>* equal contribution</span></p>
+              </details>
               <p class="problem">Mining RL had no benchmark. We built an open-source MuJoCo simulation of a real Chilean copper mine with a contour-to-MJCF pipeline.</p>
               <ul class="readout">
                 <li><b>95.38%</b>geometric IoU</li>
@@ -181,8 +183,10 @@
           <li class="paper">
             <div>
               <p class="catch">351 metres of real metro tunnel, and no GPS.</p>
-              <h3>Subterra: An Open-Source Validated Benchmark for GNSS-Denied Tunnel Navigation</h3>
-              <p class="authors"><b>Badrikanath Praharaj</b>, Abhishek S, Sreeram M.V.</p>
+              <details class="cite"><summary>Full title and authors</summary>
+                <h3>Subterra: An Open-Source Validated Benchmark for GNSS-Denied Tunnel Navigation</h3>
+                <p class="authors"><b>Badrikanath Praharaj</b>, Abhishek S, Sreeram M.V.</p>
+              </details>
               <p class="problem">Tunnel navigation had no RL testbed with real geometry, so its difficulty was invented. We rebuilt one from LiDAR scans and checked it against 199 metrics.</p>
               <ul class="readout">
                 <li><b>97.1%</b>fidelity, 199-metric suite</li>
@@ -203,8 +207,10 @@
           <li class="paper">
             <div>
               <p class="catch">A cheap robot that notices when its LiDAR is wrong.</p>
-              <h3>Teaching Robots to Say &ldquo;I Don&rsquo;t Know&rdquo;: SENTINEL for Uncertainty-Aware SLAM</h3>
-              <p class="authors">Abhishek S*, <b>Badrikanath Praharaj*</b>, Sreeram M.V.* <span>* equal contribution</span></p>
+              <details class="cite"><summary>Full title and authors</summary>
+                <h3>Teaching Robots to Say &ldquo;I Don&rsquo;t Know&rdquo;: SENTINEL for Uncertainty-Aware SLAM</h3>
+                <p class="authors">Abhishek S*, <b>Badrikanath Praharaj*</b>, Sreeram M.V.* <span>* equal contribution</span></p>
+              </details>
               <p class="problem">Cheap LiDARs are fooled by glass and mirrors without noticing, and SLAM quietly corrupts the map. SENTINEL checks each scan against depth from a second sensor.</p>
               <ul class="readout">
                 <li><b>&lt;$300</b>robots</li>
@@ -225,8 +231,10 @@
           <li class="paper">
             <div>
               <p class="catch">How long will the robots really take?</p>
-              <h3>CADENCE: Predicting Realized MAPF Execution Time Beyond Sum of Costs</h3>
-              <p class="authors">Abhishek S*, <b>Badrikanath Praharaj*</b>, Sreeram M.V.*, Mohan Prakash V <span>* equal contribution</span></p>
+              <details class="cite"><summary>Full title and authors</summary>
+                <h3>CADENCE: Predicting Realized MAPF Execution Time Beyond Sum of Costs</h3>
+                <p class="authors">Abhishek S*, <b>Badrikanath Praharaj*</b>, Sreeram M.V.*, Mohan Prakash V <span>* equal contribution</span></p>
+              </details>
               <p class="problem">Multi-robot plans are scored by sum of costs, which is informative but incomplete about how long they take on real robots. Adding a plan's motion burden cuts the prediction error sharply.</p>
               <ul class="readout">
                 <li><b>480</b>hardware trials</li>
@@ -247,8 +255,10 @@
           <li class="paper">
             <div>
               <p class="catch">Ask the model why a photo looks fake.</p>
-              <h3>REVEAL: Reasoning and Evaluation of Visual Evidence through Aligned Language</h3>
-              <p class="authors">Ipsita Praharaj, Yukta Butala, <b>Badrikanath Praharaj</b>, Yash Butala</p>
+              <details class="cite"><summary>Full title and authors</summary>
+                <h3>REVEAL: Reasoning and Evaluation of Visual Evidence through Aligned Language</h3>
+                <p class="authors">Ipsita Praharaj, Yukta Butala, <b>Badrikanath Praharaj</b>, Yash Butala</p>
+              </details>
               <p class="problem">Fine-tuned forgery detectors fail to generalize. REVEAL reframes detection as zero-shot VLM prompting, with eight-factor scoring and 3&times;3 region grids.</p>
               <ul class="readout">
                 <li><b>0.39&rarr;0.85</b>Gemini F1, Columbia (+118%)</li>
@@ -288,6 +298,7 @@
       <div class="wrap">
         <div class="head"><span class="idx">02</span><h2>Projects</h2></div>
         <p class="intro">Seven builds, from swarms in simulation to servos on a bench. Each card opens a short explainer with real footage where it exists; drawn scenes are labelled as illustrations.</p>
+        <p class="swipe" aria-hidden="true">Swipe for all seven &rarr;</p>
         <div class="cards">
           <article class="card">
             <button class="media play" type="button" data-video="mineswarm" data-title="MineSwarm, explained">
