@@ -121,9 +121,10 @@ a:hover{color:var(--accent);text-decoration-color:currentColor;}
   font:600 clamp(2.6rem, 1.5rem + 4.4vw, 4.6rem)/1.0 var(--sans);
   letter-spacing:-.035em;margin:0 0 .4em;
 }
-.next-step{margin:0 0 clamp(28px,4vw,40px);padding:14px 18px;max-width:62ch;border-left:3px solid var(--accent);border-radius:0 var(--radius) var(--radius) 0;background:color-mix(in srgb, var(--accent) 9%, transparent);line-height:1.5;}
+.next-step{margin:0 0 clamp(28px,4vw,40px);padding:clamp(14px,1.6vw,20px) clamp(18px,2vw,26px);border-left:3px solid var(--accent);border-radius:0 var(--radius) var(--radius) 0;background:color-mix(in srgb, var(--accent) 9%, transparent);line-height:1.5;}
 .next-step b{color:var(--accent);}
 .next-step .venues{font-weight:600;}
+.next-step .venues .nw{white-space:nowrap;}
 .lede{font-size:clamp(1.2rem,1.05rem + .6vw,1.5rem);line-height:1.4;max-width:30ch;margin:0 0 1em;font-weight:500;}
 .role{color:var(--muted);max-width:var(--measure);margin:0 0 1.8em;}
 .links{display:flex;flex-wrap:wrap;gap:10px;margin:0;padding:0;list-style:none;font-weight:500;font-size:15px;}
