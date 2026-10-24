@@ -458,3 +458,36 @@ section.band .card.more{background:transparent;}
   .portrait picture,.lens picture,.fig,.card{transform:none;transition:box-shadow .3s ease;}
   .portrait img,.lens img{transform:none;}
 }
+
+/* ---- hero (2026-10-24): name -> proof paragraph -> actions -> status ---- */
+.hero{padding-block:clamp(56px,10vh,120px);}
+@media (min-width:761px){ .hero-grid{grid-template-columns:minmax(0,1.3fr) minmax(0,.85fr);gap:clamp(40px,7vw,112px);} }
+.hero-copy{max-width:620px;}
+
+/* two sizes only: big name, then one reading-size paragraph; each fact said once, three teal anchors */
+.hero h1{font-size:clamp(2.6rem,1.5rem + 3.6vw,4.4rem);line-height:.94;letter-spacing:-.045em;margin:0 0 24px;}
+.hero .lead{margin:0 0 36px;max-width:42ch;font:400 clamp(1.08rem,1rem + .3vw,1.25rem)/1.65 var(--sans);color:var(--muted);text-wrap:pretty;}
+.hero .lead b{font-weight:600;color:var(--accent);}
+
+.hero .actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px 28px;margin:0 0 32px;}
+.hero .actions .btn{display:inline-block;padding:12px 22px;border-radius:8px;background:var(--accent);color:var(--bg);font-weight:600;font-size:15px;text-decoration:none;}
+.hero .actions .btn:hover{color:var(--bg);filter:brightness(1.08);}
+.hero .actions .quiet{font-weight:500;font-size:15px;color:var(--ink);text-decoration:none;padding-block:4px;border-bottom:1px solid var(--line);}
+.hero .actions .quiet:hover{color:var(--accent);border-color:var(--accent);}
+
+.hero .status{display:flex;align-items:center;gap:10px;margin:0;font:400 12.5px/1.4 var(--mono);color:var(--muted);}
+.hero .status .dot{flex:none;width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px var(--chip);}
+@media (prefers-reduced-motion: no-preference){
+  .hero .status .dot{animation:pulse 2.4s ease-in-out infinite;}
+  @keyframes pulse{50%{box-shadow:0 0 0 7px transparent;}}
+}
+
+@media (max-width:760px){
+  .hero{padding-block:24px 56px;}
+  .hero-grid{gap:28px;}
+  .portrait{max-width:min(100%,200px,24svh);}
+  .hero h1{margin-bottom:16px;}
+  .hero .lead{margin-bottom:28px;}
+  .hero .actions{gap:14px 18px;margin-bottom:24px;}
+  .hero .status{font-size:12px;}
+}
